@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:App2.viewmodel"
+             x:Class="App2.pages.Page1">
+    <ContentPage.Content>
+
+        <StackLayout BindableLayout.ItemsSource="{Binding Photo}">
+            <Button Text="load data" Command="{Binding LoadData}"/>
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding title}" FontSize="30" />
+                        
+                        
+                    </StackLayout>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
